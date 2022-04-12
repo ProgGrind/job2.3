@@ -20,11 +20,9 @@ fun main() {
         itemPrice * 0.05F
     else 0F
 
-    val result = if (!isMeloman)
-        itemPrice - discount
-    else if (isMeloman)
-            (itemPrice - discount) * 0.99
-    else itemPrice
+    val result = if (isMeloman)
+        (itemPrice - discount) * 0.99
+    else itemPrice - discount
 
     println("Сумма к оплате: $result")
 
